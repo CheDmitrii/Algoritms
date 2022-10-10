@@ -4,12 +4,20 @@ public class Clothes {
     private Size size;
     private double price;
     private String color;
+    private int isMale;
 
-    Clothes(){
+    {
         this.size = null;
         this.price = 0;
         this.color = " no clothing";
+        this.isMale = 0;
     }
+    Clothes(){}
+
+    public Clothes(int isMale) {
+        this.isMale = isMale;
+    }
+
     Clothes(Size size, double price, String color){
         this.size = size;
         this.price = price;
@@ -38,5 +46,13 @@ public class Clothes {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public int getIsMale(){
+        return isMale;
+    }
+
+    public void setIsMale(int isMale){
+        this.isMale = isMale;
     }
 }

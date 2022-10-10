@@ -67,9 +67,12 @@ public class ClothingStore {
         System.out.println("Hello, " + login + "\n");
         System.out.println("What do you want by?\n");
         Clothing.LokkClothings();
-        String thing  = scanner.next();
-        int i = scanner.nextInt();
-        clothingStore.addThing(thing, i);
-
+        String thing;
+        int i;
+        do {
+            thing  = scanner.next();
+            i = scanner.nextInt();
+            clothingStore.addThing(thing, i);
+        }while (!Clothing.addThing(thing, i));
     }
 }

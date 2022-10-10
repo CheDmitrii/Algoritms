@@ -12,7 +12,7 @@ public enum Clothing {
     JACKET(12, "Jacket"),
     SHOSE(20, "Shose");
     private int countClothing;
-    private String type;
+    private  final String type;
     static final public String tie ="Tie";
     static final public String tshort ="Tshort";
     static final public String pants ="Pants";
@@ -88,6 +88,7 @@ public enum Clothing {
                     }
                 default:
                     System.out.println("Error 404404");
+                    System.out.println("Try again");
                     return false;
             }
     }
