@@ -9,4 +9,32 @@ public enum ModelsOfComputer {
     ModelsOfComputer(String model, Processor processor, Monitor monitor, Memory memory){
         this.computer = new Computer(model, processor, memory, monitor);
     }
+    public static void getCatalog(){
+        System.out.println("Our computer's catalog:\n");
+        int k = 1;
+        for (ModelsOfComputer i : ModelsOfComputer.values()){
+            System.out.println(k + ". " + i.getComputer().getModel());
+            k++;
+        }
+        System.out.println("\n");
+    }
+    public Computer getComputer(){
+        return  this.computer;
+    }
+    public static boolean isComp(String model){
+        for (ModelsOfComputer i : ModelsOfComputer.values()){
+            if (i.getComputer().getModel().equals(model)){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static Computer isComputer(String model){
+        for (ModelsOfComputer i : ModelsOfComputer.values()){
+            if (i.getComputer().getModel().equals(model)){
+                return i.getComputer();
+            }
+        }
+        return null;
+    }
 }
