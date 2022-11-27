@@ -15,21 +15,15 @@ public enum Size {
     }
     public String getDescription(){
         switch (euroSize){
-            case (32):
+            case 32:
                 return "Kid's size";
-            case (34):
-                return "Adult's Size";
-            case (36):
-                return "Adult's Size";
-            case (38):
-                return "Adult's Size";
-            case (40):
-                return "Adult's Size";
-            case (42):
-                return "Adult's Size";
-            case (44):
-                return "Adult's Size";
-            case (46):
+            case 34:
+            case 38:
+            case 36:
+            case 40:
+            case 42:
+            case 44:
+            case 46:
                 return "Adult's Size";
             default:
                 return "no size";

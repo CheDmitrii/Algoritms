@@ -7,6 +7,8 @@ public class MyStringBuilder {
     private StringBuilder stringBuilder;
     private ArrayList<String> list;
 
+    //TODO: StringBuilder what is it?
+
     MyStringBuilder(){
         stringBuilder = new StringBuilder();
         list = new ArrayList<>();

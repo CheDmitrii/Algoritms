@@ -9,7 +9,7 @@ public class Clothes {
     {
         this.size = null;
         this.price = 0;
-        this.color = " no clothing";
+        this.color = " no color";
         this.isMale = 0;
     }
     Clothes(){}

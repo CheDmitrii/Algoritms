@@ -27,16 +27,12 @@ public enum Seazon {
     }
     public void getDecription(){
         switch (title) {
-            case (tittleSummer):
+            case "Summer":
+            case "Spring":
                 System.out.println("warm season of year");
                 break;
-            case (tittleSpring):
-                System.out.println("warm season of year");
-                break;
-            case (tittleWinter):
-                System.out.println("cold season of year");
-                break;
-            case(tittleAutumn):
+            case "Winter":
+            case "Autumn":
                 System.out.println("cold season of year");
                 break;
         }

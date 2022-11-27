@@ -12,7 +12,7 @@ public class KS {
 
     public static int K2S(int k, int s){
         int count = 0;
-        for (int i = (int)Math.pow(10, k - 1); i <= (int) Math.pow(10, k) - 1; i++){
+        for (int i = (int)Math.pow(10, k - 1); i <= (int)Math.pow(10, k) - 1; i++){
             if (getSum(i) == s){
                 count++;
             }
