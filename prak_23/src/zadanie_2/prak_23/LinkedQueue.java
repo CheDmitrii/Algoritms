@@ -1,6 +1,6 @@
 package zadanie_2.prak_23;
 
-public class LinkedQueue<T> implements Queue<T>{// num1 num2 num3
+public class LinkedQueue<T> implements Queue<T>{
     private Node<T> first;
     private Node<T> last;
     private static int size;
@@ -10,7 +10,6 @@ public class LinkedQueue<T> implements Queue<T>{// num1 num2 num3
     @Override
     public void addEllement(T element) {
         if (!isEmpty()){
-            Node<T> el = new Node<>(element, null);
             this.last = new Node<>(element, null);
         }else {
             this.last = null;
@@ -21,7 +20,15 @@ public class LinkedQueue<T> implements Queue<T>{// num1 num2 num3
 
     @Override
     public void clear() {
-
+        Node<T> el = this.first.next;
+        while (el != null){
+            Node<T> next = el.next;
+            el.element = null;
+            el.next = null;
+            el = next;
+        }
+        this.last = this.first = null;
+        size = 0;
     }
 
     @Override
@@ -46,12 +53,10 @@ public class LinkedQueue<T> implements Queue<T>{// num1 num2 num3
     public int size() {
         return size;
     }
-
-
 }
 
 
-class Node<T>{
+class Node<T> {
     T element;
     Node<T> next;
 
