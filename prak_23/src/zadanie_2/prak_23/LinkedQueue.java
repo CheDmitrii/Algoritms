@@ -10,7 +10,8 @@ public class LinkedQueue<T> implements Queue<T>{
     @Override
     public void addEllement(T element) {
         if (!isEmpty()){
-            this.last = new Node<>(element, null);
+            this.last.next = new Node<>(element, null);
+            this.last = this.last.next;
         }else {
             this.last = null;
             this.first = new Node<>(element, this.last);
@@ -53,15 +54,14 @@ public class LinkedQueue<T> implements Queue<T>{
     public int size() {
         return size;
     }
-}
 
+    class Node<T> {
+        T element;
+        Node<T> next;
 
-class Node<T> {
-    T element;
-    Node<T> next;
-
-    public Node(T element, Node<T> next) {
-        this.element = element;
-        this.next = next;
+        public Node(T element, Node<T> next) {
+            this.element = element;
+            this.next = next;
+        }
     }
 }
